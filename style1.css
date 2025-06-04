@@ -1,163 +1,89 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     text-align: center;
+    font-family: sans-serif;
+}
+
+body {
+    padding: 1rem;
 }
 
 h1 {
     background-color: darkgreen;
     color: white;
-    height: 5rem;
-    line-height: 5rem;
-    font-size: 2rem;
+    height: 10vh;
+    line-height: 10vh;
+    font-size: 5vw;
+    margin-bottom: 2rem;
 }
 
+/* Choices container */
+.choices {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin: 2rem auto;
+}
+
+/* Each choice circle */
 .choice {
-    height: 165px;
-    width: 165px;
+    height: 30vw;
+    width: 30vw;
+    max-height: 150px;
+    max-width: 150px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: transform 0.3s;
 }
 
 .choice:hover {
     background-color: black;
     cursor: pointer;
+    transform: scale(1.05);
 }
 
-img {
-    height: 150px;
-    width: 150px;
+/* Image inside each choice */
+.choice img {
+    height: 85%;
+    width: 85%;
     object-fit: cover;
     border-radius: 50%;
 }
 
-.choices {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 3rem;
-    margin-top: 5rem;
-}
-
+/* Scoreboard container */
 .score-board {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2rem;
-    margin-top: 3rem;
-    gap: 5rem;
+    gap: 2rem;
+    font-size: 4vw;
+    margin: 2rem 0;
+    flex-wrap: wrap;
 }
 
-#user-score,
-#comp-score {
-    font-size: 4rem;
+/* Score numbers */
+#user-score, #comp-score {
+    font-size: 6vw;
 }
 
+/* Message container */
 .msg-container {
-    margin-top: 5rem;
+    margin-top: 3rem;
 }
 
 #msg {
     background-color: black;
     color: white;
-    font-size: 2rem;
-    display: inline;
-    padding: 1rem;
+    font-size: 4vw;
+    padding: 1rem 2rem;
+    display: inline-block;
     border-radius: 1rem;
-}
-
-/* 📱 Mobile Portrait Styles */
-@media (max-width: 600px) and (orientation: portrait) {
-    h1 {
-        font-size: 1.5rem;
-        height: 4rem;
-        line-height: 4rem;
-    }
-
-    .choices {
-        flex-direction: column;
-        gap: 2rem;
-        margin-top: 3rem;
-    }
-
-    .choice {
-        height: 120px;
-        width: 120px;
-    }
-
-    img {
-        height: 110px;
-        width: 110px;
-    }
-
-    .score-board {
-        flex-direction: column;
-        gap: 2rem;
-        font-size: 1.5rem;
-        margin-top: 2rem;
-    }
-
-    #user-score,
-    #comp-score {
-        font-size: 3rem;
-    }
-
-    #msg {
-        font-size: 1.5rem;
-        padding: 0.8rem;
-    }
-
-    .msg-container {
-        margin-top: 3rem;
-    }
-}
-
-/* 📱 Mobile Landscape Styles */
-@media (max-width: 600px) and (orientation: landscape) {
-    h1 {
-        font-size: 1.3rem;
-        height: 3rem;
-        line-height: 3rem;
-    }
-
-    .choices {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 1.5rem;
-        margin-top: 2rem;
-    }
-
-    .choice {
-        height: 100px;
-        width: 100px;
-    }
-
-    img {
-        height: 90px;
-        width: 90px;
-    }
-
-    .score-board {
-        flex-direction: row;
-        gap: 1.5rem;
-        font-size: 1.3rem;
-        margin-top: 1.5rem;
-    }
-
-    #user-score,
-    #comp-score {
-        font-size: 2.5rem;
-    }
-
-    #msg {
-        font-size: 1.2rem;
-        padding: 0.6rem;
-    }
-
-    .msg-container {
-        margin-top: 2rem;
-    }
+    max-width: 90vw;
+    word-wrap: break-word;
 }
