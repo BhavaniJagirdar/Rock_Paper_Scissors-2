@@ -12,11 +12,6 @@ h1 {
     font-size: 2rem;
 }
 
-.choice:hover {
-    background-color: black;
-    cursor: pointer;
-}
-
 .choice {
     height: 165px;
     width: 165px;
@@ -24,6 +19,11 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.choice:hover {
+    background-color: black;
+    cursor: pointer;
 }
 
 img {
@@ -68,8 +68,8 @@ img {
     border-radius: 1rem;
 }
 
-/* 📱 Mobile Responsive Styles */
-@media (max-width: 600px) {
+/* 📱 Mobile Portrait Styles */
+@media (max-width: 600px) and (orientation: portrait) {
     h1 {
         font-size: 1.5rem;
         height: 4rem;
@@ -111,5 +111,53 @@ img {
 
     .msg-container {
         margin-top: 3rem;
+    }
+}
+
+/* 📱 Mobile Landscape Styles */
+@media (max-width: 600px) and (orientation: landscape) {
+    h1 {
+        font-size: 1.3rem;
+        height: 3rem;
+        line-height: 3rem;
+    }
+
+    .choices {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.5rem;
+        margin-top: 2rem;
+    }
+
+    .choice {
+        height: 100px;
+        width: 100px;
+    }
+
+    img {
+        height: 90px;
+        width: 90px;
+    }
+
+    .score-board {
+        flex-direction: row;
+        gap: 1.5rem;
+        font-size: 1.3rem;
+        margin-top: 1.5rem;
+    }
+
+    #user-score,
+    #comp-score {
+        font-size: 2.5rem;
+    }
+
+    #msg {
+        font-size: 1.2rem;
+        padding: 0.6rem;
+    }
+
+    .msg-container {
+        margin-top: 2rem;
     }
 }
