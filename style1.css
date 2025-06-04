@@ -1,22 +1,23 @@
-*{
-    margin:0;
-    padding:0;
+* {
+    margin: 0;
+    padding: 0;
     text-align: center;
 }
 
-h1{
+h1 {
     background-color: darkgreen;
     color: white;
     height: 5rem;
     line-height: 5rem;
+    font-size: 2rem;
 }
 
-.choice:hover{
-    background-color: black ;
+.choice:hover {
+    background-color: black;
     cursor: pointer;
 }
 
-.choice{
+.choice {
     height: 165px;
     width: 165px;
     border-radius: 50%;
@@ -25,14 +26,14 @@ h1{
     align-items: center;
 }
 
-img{
+img {
     height: 150px;
     width: 150px;
     object-fit: cover;
     border-radius: 50%;
 }
 
-.choices{
+.choices {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -40,7 +41,7 @@ img{
     margin-top: 5rem;
 }
 
-.score-board{
+.score-board {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -49,14 +50,16 @@ img{
     gap: 5rem;
 }
 
-#user-score,#comp-score{
+#user-score,
+#comp-score {
     font-size: 4rem;
 }
 
-.msg-container{
+.msg-container {
     margin-top: 5rem;
 }
-#msg{
+
+#msg {
     background-color: black;
     color: white;
     font-size: 2rem;
@@ -64,11 +67,19 @@ img{
     padding: 1rem;
     border-radius: 1rem;
 }
-@media (max-width: 768px) {
+
+/* 📱 Mobile Responsive Styles */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.5rem;
+        height: 4rem;
+        line-height: 4rem;
+    }
+
     .choices {
         flex-direction: column;
         gap: 2rem;
-        margin-top: 2rem;
+        margin-top: 3rem;
     }
 
     .choice {
@@ -77,19 +88,28 @@ img{
     }
 
     img {
-        height: 100px;
-        width: 100px;
+        height: 110px;
+        width: 110px;
     }
 
     .score-board {
         flex-direction: column;
         gap: 2rem;
         font-size: 1.5rem;
+        margin-top: 2rem;
     }
 
-    #user-score, #comp-score {
+    #user-score,
+    #comp-score {
         font-size: 3rem;
     }
 
     #msg {
         font-size: 1.5rem;
+        padding: 0.8rem;
+    }
+
+    .msg-container {
+        margin-top: 3rem;
+    }
+}
